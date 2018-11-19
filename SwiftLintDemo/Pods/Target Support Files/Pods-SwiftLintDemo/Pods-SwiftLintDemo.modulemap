@@ -1,0 +1,6 @@
+module Pods_SwiftLintDemo {
+  umbrella header "Pods-SwiftLintDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

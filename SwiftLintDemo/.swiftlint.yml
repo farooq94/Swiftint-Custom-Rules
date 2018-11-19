@@ -1,0 +1,12 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Carthage
+- Pods
+
+# Enable rules which are disabled from the default set.
+opt_in_rules:
+- private_outlet
+
+disabled_rules: # rule identifiers to exclude from running
+- line_length
+#private_outlet:
+#allow_private_set: true
