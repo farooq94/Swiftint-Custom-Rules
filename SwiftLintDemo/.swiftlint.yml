@@ -8,5 +8,5 @@ opt_in_rules:
 
 disabled_rules: # rule identifiers to exclude from running
 - line_length
-#private_outlet:
-#allow_private_set: true
+- colon
+
