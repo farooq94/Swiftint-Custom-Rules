@@ -73,14 +73,30 @@
 		B72502B5219460D800C1BF6F /* SwiftLintDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B7737B8121AE007E0018F84D /* Messenger */,
+				B7737B8021AE002E0018F84D /* Controllers */,
 				B72502B6219460D800C1BF6F /* AppDelegate.swift */,
-				B72502B8219460D800C1BF6F /* ViewController.swift */,
 				B72502BA219460D800C1BF6F /* Main.storyboard */,
 				B72502BD219460DB00C1BF6F /* Assets.xcassets */,
 				B72502BF219460DB00C1BF6F /* LaunchScreen.storyboard */,
 				B72502C2219460DB00C1BF6F /* Info.plist */,
 			);
 			path = SwiftLintDemo;
+			sourceTree = "<group>";
+		};
+		B7737B8021AE002E0018F84D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B72502B8219460D800C1BF6F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B7737B8121AE007E0018F84D /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messenger;
 			sourceTree = "<group>";
 		};
 		E3D808436D455F88C6761223 /* Frameworks */ = {

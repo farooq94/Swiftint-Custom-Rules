@@ -1,6 +1,8 @@
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage
 - Pods
+- SwiftLintDemo/Messenger
+- Source/ExcludedFile.swift
 
 # Enable rules which are disabled from the default set.
 opt_in_rules:
