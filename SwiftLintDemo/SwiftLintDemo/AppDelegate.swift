@@ -1,8 +1,8 @@
 //
-//  AppDelegate.swift
+//  ViewController.swift
 //  SwiftLintDemo
 //
-//  Created by Invision-MacBookPro-shayan on 08/11/2018.
+//  Created by Invision-MacBookPro-Farooq on 29/11/2018.
 //  Copyright © 2018 Invision-MacBookPro-F011. All rights reserved.
 //
 
@@ -16,11 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
-
-
-
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

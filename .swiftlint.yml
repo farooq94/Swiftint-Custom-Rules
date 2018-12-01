@@ -1,0 +1,39 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Carthage
+- SwiftLintDemo/Pods
+- SwiftLintDemo/Messenger
+- SwiftLintGit/SwiftLintDemo/AppDelegate.swift
+- SwiftLintDemoTests
+- SwiftLintDemoUITests
+
+# Enable rules which are disabled from the default set.
+opt_in_rules:
+- private_outlet
+- ternary_single_ifelse_statement
+
+disabled_rules: # rule identifiers to exclude from running
+- line_length
+- colon
+- trailing_whitespace
+
+
+custom_rules:
+comments_capitalized_ignore_possible_code:
+name: "Capitalize First Word In Comment"
+regex: "(^ +// +(?!swiftlint)[a-z]+)"
+message: "The first word of a comment should be capitalized"
+severity: error
+
+ternary_single_ifelse_statement:
+name: "Single Statement in If/Else"
+regex: '(if[( \t]+.*(\{([^{}\n]*\n){0,2}[ \t]*\})\s*else[ \t]+(\{([^{}\n]*\n){0,2}[ \t]*\}))'
+message: "Use ternary operator rather than using if else for single statement"
+severity: warning
+
+use_typed_segues:
+name: "Use Segues.swift enums!"
+regex: '\Q.performSegue(withIdentifier:\E\s?\x22'
+severity: error
+match_kinds:
+- identifier
+

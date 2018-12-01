@@ -1,14 +1,70 @@
+#********************** EXCLUDE PATHS ********************
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage
 - Pods
 - SwiftLintDemo/Messenger
-- Source/ExcludedFile.swift
+- SwiftLintDemo/AppDelegate.swift
+- SwiftLintDemoTests
+- SwiftLintDemoUITests
+
+#********************** ENABLED RULES*********************
 
 # Enable rules which are disabled from the default set.
 opt_in_rules:
 - private_outlet
+- ternary_single_ifelse_statement
+- large_tuple
+- collection_alignment
+- first_where
+
+
+#********************** DISABLED RULES*********************
 
 disabled_rules: # rule identifiers to exclude from running
-- line_length
 - colon
+- line_length
+- comma
+- trailing_whitespace
+- vertical_whitespace
+- opening_brace
+# Find all the available rules by running:
+# swiftlint rules
 
+#********************** CUSTOMIZE RULES********************
+
+private_outlet:
+  severity: error
+
+first_where:
+  severity: error
+identifier_name:
+  min_length: # only min_length
+    error: 4 # only error
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+
+large_tuple: # warn user when using 3 values in tuple, give error if there are 4
+    - 3 # warning
+    - 4 # error
+
+#********************** MY CUSTOM RULES*********************#
+
+custom_rules:
+  ternary_single_ifelse_statement:
+    name: "Single Statement in If/Else"
+    regex: '(if[( \t]+.*(\{([^{}\n]*\n){0,2}[ \t]*\})\s*else[ \t]+(\{([^{}\n]*\n){0,2}[ \t]*\}))'
+    message: "Use ternary operator rather than using if else for single statement"
+    severity: error
+
+
+  use_typed_segues:
+    name: "Use Segues.swift enums!"
+    regex: '\Q.performSegue(withIdentifier:\E\s?\x22'
+    severity: error
+    match_kinds:
+      - identifier
+      - identifier
+      - string
+#********************** WHITELIST RULES*********************#
