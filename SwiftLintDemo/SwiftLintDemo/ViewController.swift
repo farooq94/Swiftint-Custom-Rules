@@ -22,13 +22,22 @@ class ViewController: UIViewController {
   // swiftlint:enable private_outlet
   @IBOutlet weak private var myView5: UIView!
 
-  let id = 007
-  //  let ids = [001,002,003,001]
+
   var tuple: (a: Int, b: Int, c: Int, d: Int)?
 
   override func viewDidLoad() {
     super.viewDidLoad()
   }
+
+  func ruleFirstWhere(){
+    let myID = 007
+    let userIDs = [001,002,007,001]
+    //Triggering Exmaple
+    _ = userIDs.filter{$0 == myID}.first
+    //Non Triggering Exmaple
+     _ = userIDs.first(where: {$0 == myID})
+  }
+
 
   func ternarySingleIfElseStatement() -> Int {
     if 1 > 2 {
